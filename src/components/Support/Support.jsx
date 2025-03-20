@@ -1,75 +1,103 @@
+import { motion } from "framer-motion";
 import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
+  CalendarDaysIcon,
+  ClipboardDocumentCheckIcon,
+  CurrencyDollarIcon,
+  WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
   {
-    name: "Push to deploy",
+    name: "Gestión de Mantenimientos",
     description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    icon: CloudArrowUpIcon,
+      "Registra, programa y notifica mantenimientos para cada vehículo. Mantén un control preciso sobre el historial de servicios.",
+    icon: WrenchScrewdriverIcon,
   },
   {
-    name: "SSL certificates",
+    name: "Agendamiento de Citas",
     description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    icon: LockClosedIcon,
+      "Permite a los clientes reservar citas para mantenimientos de manera rápida y sencilla, con recordatorios automáticos.",
+    icon: CalendarDaysIcon,
   },
   {
-    name: "Simple queues",
+    name: "Cálculo de Ingresos y Nómina",
     description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-    icon: ArrowPathIcon,
+      "Genera reportes detallados de ingresos y administra la nómina del personal del taller de forma eficiente.",
+    icon: CurrencyDollarIcon,
   },
   {
-    name: "Advanced security",
+    name: "Compra de Repuestos",
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-    icon: FingerPrintIcon,
+      "Facilita la compra de repuestos directamente desde la plataforma, asegurando disponibilidad y calidad.",
+    icon: ClipboardDocumentCheckIcon,
   },
 ];
+
 function Support() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className=" bg-white bg-opacity-90  py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="mx-auto max-w-2xl lg:text-center"
+        >
           <h2 className="text-base/7 font-semibold text-indigo-600">
-            Deploy faster
+            Optimiza la gestión de tu taller
           </h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
-            Everything you need to deploy your app
+            AutoManage: La solución integral para talleres automotrices
           </p>
           <p className="mt-6 text-lg/8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-            In mi viverra elit nunc.
+            Una plataforma diseñada para agilizar la gestión de vehículos,
+            mantenimiento, agenda y finanzas de tu taller. Todo en un solo lugar.
           </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
+        >
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative pl-16">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 + index * 0.2 }}
+                className="relative pl-16"
+              >
+                <motion.div
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600"
+                >
+                  <feature.icon
+                    aria-hidden="true"
+                    className="size-6 text-white"
+                  />
+                </motion.div>
                 <dt className="text-base/7 font-semibold text-gray-900">
-                  <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon
-                      aria-hidden="true"
-                      className="size-6 text-white"
-                    />
-                  </div>
                   {feature.name}
                 </dt>
                 <dd className="mt-2 text-base/7 text-gray-600">
                   {feature.description}
                 </dd>
-              </div>
+              </motion.div>
             ))}
           </dl>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

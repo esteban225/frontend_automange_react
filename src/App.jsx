@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-import Fondo from "./assets/Fondo2.mp4";
+import Fondo from "./assets/Fondo.mp4";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/About/About";
 import Support from "./components/Support/Support";
@@ -23,7 +23,7 @@ function App() {
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    opacity: 0.2,
+    opacity: 0.4,
     zIndex: -1,
   };
 
