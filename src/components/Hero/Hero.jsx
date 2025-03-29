@@ -42,7 +42,7 @@ const Hero = () => {
           >
             {/* Botón Jugar ahora */}
             <a
-              href="http://localhost:4200/#/login"
+              href="https://frontend-automange.vercel.app/#/login"
               className="bg-blue-600 py-2 px-12 rounded-3xl text-white hover:bg-purple-700 transition-all duration-300 flex items-center cursor-pointer"
             >
               Ingresa
@@ -52,7 +52,7 @@ const Hero = () => {
             <br />
 
             <a
-              href="http://localhost:4200/#/register"
+              href="https://frontend-automange.vercel.app/#/register"
               className="text-white flex items-center cursor-pointer"
             >
               Registrate
