@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBlog, faUser } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import dev1 from "../../assets/developers/1.jpg";
+import dev2 from "../../assets/developers/2.jpg";
 
 const posts = [
   {
@@ -9,15 +11,14 @@ const posts = [
     href: "#",
     description:
       "Descubre estrategias clave para mejorar la conversión en tu negocio. Consejos prácticos para optimizar tu embudo de ventas.",
-    date: "16 de marzo, 2020",
-    datetime: "2020-03-16",
+    date: "7 de abril, 2025",
+    datetime: "2025-04-07",
     category: { title: "Desarrollador", href: "#" },
     author: {
       name: "Daniela Melo",
       role: "Co-Fundadora / CTO",
       href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: dev2,
     },
   },
   {
@@ -26,29 +27,35 @@ const posts = [
     href: "#",
     description:
       "Aprende cómo una interfaz intuitiva y accesible puede aumentar la retención de clientes y mejorar la satisfacción general.",
-    date: "20 de abril, 2021",
-    datetime: "2021-04-20",
-    category: { title: "Diseño UX/UI", href: "#" },
+    date: "7 de abril, 2025",
+    datetime: "2025-04-07",
+    category: { title: "Desarrollador", href: "#" },
     author: {
       name: "Esteban Ricardo",
       role: "Co-Fundador / CTO",
       href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: dev1,
     },
   },
 ];
 
 function About() {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className=" bg-white bg-opacity-90 py-24 sm:py-32 flex flex-col items-center text-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className=" bg-white bg-opacity-90 py-24 sm:py-32 flex flex-col items-center text-center"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center">
         <div className="mx-auto max-w-2xl lg:mx-0 text-center flex flex-col items-center">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            <FontAwesomeIcon icon={faBlog} className="mr-2 text-pretty" /> Desde el blog
+            <FontAwesomeIcon icon={faBlog} className="mr-2 text-pretty" /> Desde
+            el blog
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            Aprende cómo hacer crecer tu negocio con nuestros consejos de expertos.
+            Aprende cómo hacer crecer tu negocio con nuestros consejos de
+            expertos.
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-auto lg:max-w-4xl lg:grid-cols-2">
@@ -91,7 +98,10 @@ function About() {
                 <div className="text-sm">
                   <p className="font-semibold text-gray-900">
                     <a href={post.author.href}>
-                      <FontAwesomeIcon icon={faUser} className="mr-2 text-pretty" />
+                      <FontAwesomeIcon
+                        icon={faUser}
+                        className="mr-2 text-pretty"
+                      />
                       {post.author.name}
                     </a>
                   </p>
@@ -103,7 +113,8 @@ function About() {
         </div>
         <div className="mt-16 text-center">
           <p className="text-lg text-gray-600">
-            Explora más artículos en nuestro blog para descubrir estrategias innovadoras y consejos prácticos.
+            Explora más artículos en nuestro blog para descubrir estrategias
+            innovadoras y consejos prácticos.
           </p>
           <motion.a
             whileHover={{ scale: 1.1 }}
@@ -114,6 +125,7 @@ function About() {
           </motion.a>
         </div>
       </div>
+
     </motion.div>
   );
 }

@@ -28,23 +28,31 @@ const Navbar = () => {
       id: 1,
       title: "Inicio",
       link: "/",
+      icon: "bi bi-house-door",
     },
     {
       id: 2,
       title: "Nosotros",
       link: "/about",
+      icon: "bi bi-people",
     },
     {
       id: 3,
       title: "Soporte",
       link: "/support",
+      icon: "bi bi-headset",
     },
     {
-
       id: 4,
       title: "Contacto",
       link: "/contacts",
-
+      icon: "bi bi-envelope",
+    },
+    {
+      id: 5,
+      title: "Tienda",
+      link: "https://ecommerce-automanage.vercel.app/",
+      icon: "bi bi-bag",
     },
   ];
 
@@ -53,13 +61,16 @@ const Navbar = () => {
       <div className="flex justify-between items-center sm:px-10 sm:py-2 px-1 py-1">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src={Logo} alt="Logo" 
-                      width={60}
-                      height={40}
-                      className="col-span-2 max-h-13 w-[80px] object-contain lg:col-span-1" />
+          <img
+            src={Logo}
+            alt="Logo"
+            width={60}
+            height={40}
+            className="col-span-2 max-h-13 w-[80px] object-contain lg:col-span-1"
+          />
         </div>
 
-        {/* Botón de menú hamburguesa - visible solo en móvil */}
+        {/* Botón hamburguesa */}
         <button className="md:hidden text-white p-2" onClick={toggleMenu}>
           <svg
             className="w-6 h-6"
@@ -85,23 +96,23 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Navegación - visible en desktop */}
+        {/* Navegación desktop */}
         <div className="hidden md:block">
-          <ul className="flex sm:space-x-8 space-x-4 px-4">
+          <ul className="flex sm:space-x-15 space-x-10 px-10">
             {navbarLinks.map((link) => (
               <li key={link.id}>
                 <a
                   href={link.link}
-                  className="sm:text-lg text-sm text-white hover:text-purple-400 transition-transform duration-300 transform hover:scale-110 inline-block hover:drop-shadow-[0_0_8px_#a855f7]"
+                  className="sm:text-lg text-sm text-white hover:text-purple-400 transition-transform duration-300 transform hover:scale-110 inline-block hover:drop-shadow-[0_0_8px_#a855f7] flex items-center gap-2"
                 >
-                  {link.title}
+                  <i className={`${link.icon}`}></i> {link.title}
                 </a>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Redes - visible en desktop */}
+        {/* Redes sociales desktop */}
         <div className="hidden md:block">
           <ul className="flex space-x-4">
             {navbarRedes.map((link) => (
@@ -113,7 +124,7 @@ const Navbar = () => {
                   className="inline-block transition-transform duration-300 transform hover:scale-125"
                 >
                   <i
-                    className={`${link.icon} sm:text-2xl text-lg text-white transition-all duration-300 hover:text-purple-500  hover:drop-shadow-[0_0_8px_#a855f7]`}
+                    className={`${link.icon} sm:text-2xl text-lg text-white transition-all duration-300 hover:text-purple-500 hover:drop-shadow-[0_0_8px_#a855f7]`}
                   ></i>
                 </a>
               </li>
@@ -128,22 +139,20 @@ const Navbar = () => {
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        {/* Links de navegación móvil */}
         <ul className="flex flex-col px-4 py-2">
           {navbarLinks.map((link) => (
             <li key={link.id} className="py-2 text-center">
               <a
                 href={link.link}
-                className="text-white hover:text-purple-900 block transition-all duration-300  hover:drop-shadow-[0_0_8px_#a855f7]"
+                className="text-white hover:text-purple-900 block transition-all duration-300 hover:drop-shadow-[0_0_8px_#a855f7] flex justify-center items-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
-                {link.title}
+                <i className={`${link.icon}`}></i> {link.title}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Redes sociales móvil */}
         <ul className="flex space-x-4 px-4 py-2 border-t border-blue-700 justify-center">
           {navbarRedes.map((link) => (
             <li key={link.id}>
@@ -155,7 +164,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 <i
-                  className={`${link.icon} text-lg text-white hover:text-purple-900 transition-all duration-300  hover:drop-shadow-[0_0_8px_#a855f7]`}
+                  className={`${link.icon} text-lg text-white hover:text-purple-900 transition-all duration-300 hover:drop-shadow-[0_0_8px_#a855f7]`}
                 ></i>
               </a>
             </li>
