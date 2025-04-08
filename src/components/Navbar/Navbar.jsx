@@ -103,7 +103,7 @@ const Navbar = () => {
               <li key={link.id}>
                 <a
                   href={link.link}
-                  className="sm:text-lg text-sm text-white hover:text-purple-400 transition-transform duration-300 transform hover:scale-110 inline-block hover:drop-shadow-[0_0_8px_#a855f7] flex items-center gap-2"
+                  className="sm:text-lg text-sm  transition-transform duration-300 transform hover:scale-110 inline-block text-white hover:text-gray-950 hover:drop-shadow-[0_0_8px_#a855f7]  items-center gap-2"
                 >
                   <i className={`${link.icon}`}></i> {link.title}
                 </a>
@@ -121,10 +121,10 @@ const Navbar = () => {
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block transition-transform duration-300 transform hover:scale-125"
+                  className="flex transition-transform duration-300 transform hover:scale-125"
                 >
                   <i
-                    className={`${link.icon} sm:text-2xl text-lg text-white transition-all duration-300 hover:text-purple-500 hover:drop-shadow-[0_0_8px_#a855f7]`}
+                    className={`${link.icon} sm:text-2xl text-lg text-white transition-all duration-300 hover:text-gray-950 hover:drop-shadow-[0_0_8px_#a855f7]`}
                   ></i>
                 </a>
               </li>
@@ -144,7 +144,8 @@ const Navbar = () => {
             <li key={link.id} className="py-2 text-center">
               <a
                 href={link.link}
-                className="text-white hover:text-purple-900 block transition-all duration-300 hover:drop-shadow-[0_0_8px_#a855f7] flex justify-center items-center gap-2"
+                className="text-white hover:text-gray-950  block transition-all duration-300 hover:drop-shadow-[0_0_8px_#a855f7] 
+               justify-center items-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
                 <i className={`${link.icon}`}></i> {link.title}
@@ -164,7 +165,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 <i
-                  className={`${link.icon} text-lg text-white hover:text-purple-900 transition-all duration-300 hover:drop-shadow-[0_0_8px_#a855f7]`}
+                  className={`${link.icon} text-lg text-white hover:text-gray-950  transition-all duration-300 hover:drop-shadow-[0_0_8px_#a855f7]`}
                 ></i>
               </a>
             </li>

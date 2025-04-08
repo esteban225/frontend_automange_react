@@ -39,7 +39,7 @@ function Support() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className=" bg-white bg-opacity-90  py-24 sm:py-32"
+      className=" bg-white bg-opacity-80  py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div

@@ -1,7 +1,7 @@
-import Personaje from "../../assets/Personaje.png";
+
 import Logo from "../../assets/Logo.png";
 import { motion } from "framer-motion";
-import { slideUp, slideInFromSide } from "../../utility/animation";
+import { slideUp } from "../../utility/animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
@@ -23,7 +23,7 @@ const Hero = () => {
             variants={slideUp(0.3)}
             initial="initial"
             animate="animate"
-            className="py-5 text-white text-lg md:text-xl" // Aumentado el tamaño del texto
+            className=" py-5 text-white  text-lg md:text-xl" // Aumentado el tamaño del texto
           >
             &quot; AutoManage &quot; es una plataforma digital diseñada para
             optimizar la gestión de servicios automotrices en Duitama. Su
@@ -43,7 +43,7 @@ const Hero = () => {
             {/* Botón Jugar ahora */}
             <a
               href="https://frontend-automange.vercel.app/#/login"
-              className="bg-blue-600 py-2 px-12 rounded-3xl text-white hover:bg-purple-700 transition-all duration-300 flex items-center cursor-pointer"
+              className="bg-blue-600 py-2 px-12 rounded-3xl text-white hover:bg-violet-900 transition-all duration-300 flex items-center cursor-pointer"
             >
               Ingresa
               <FontAwesomeIcon icon={faPlay} className="ml-2 text-xl" />
@@ -61,15 +61,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* imagen */}
-        <motion.div
-          variants={slideInFromSide("right", 0.5)}
-          initial="initial"
-          animate="animate"
-          className="p-10 sm:p-10 md:p-15 lg:p-30 xl:p-36"
-        >
-          <img src={Personaje} alt="Personaje de juego" />
-        </motion.div>
+
       </div>
     </section>
   );

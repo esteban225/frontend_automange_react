@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBlog, faUser } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import dev1 from "../../assets/developers/1.jpg";
 import dev2 from "../../assets/developers/2.jpg";
-
+import dev1 from "../../assets/developers/1.jpg";
 const posts = [
   {
     id: 1,
@@ -11,9 +10,9 @@ const posts = [
     href: "#",
     description:
       "Descubre estrategias clave para mejorar la conversión en tu negocio. Consejos prácticos para optimizar tu embudo de ventas.",
-    date: "7 de abril, 2025",
-    datetime: "2025-04-07",
-    category: { title: "Desarrollador", href: "#" },
+    date: "16 de marzo, 2020",
+    datetime: "2020-03-16",
+    category: { title: "Desarrolladora", href: "#" },
     author: {
       name: "Daniela Melo",
       role: "Co-Fundadora / CTO",
@@ -27,8 +26,8 @@ const posts = [
     href: "#",
     description:
       "Aprende cómo una interfaz intuitiva y accesible puede aumentar la retención de clientes y mejorar la satisfacción general.",
-    date: "7 de abril, 2025",
-    datetime: "2025-04-07",
+    date: "20 de abril, 2021",
+    datetime: "2021-04-20",
     category: { title: "Desarrollador", href: "#" },
     author: {
       name: "Esteban Ricardo",
@@ -45,7 +44,7 @@ function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className=" bg-white bg-opacity-90 py-24 sm:py-32 flex flex-col items-center text-center"
+      className=" bg-white bg-opacity-80 py-24 sm:py-32 flex flex-col items-center text-center"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col items-center">
         <div className="mx-auto max-w-2xl lg:mx-0 text-center flex flex-col items-center">
@@ -125,7 +124,6 @@ function About() {
           </motion.a>
         </div>
       </div>
-
     </motion.div>
   );
 }

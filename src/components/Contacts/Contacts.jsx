@@ -45,7 +45,7 @@ function Contacts() {
       initial={{ opacity: 0, y: 20 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.5 }}
-      className="isolate bg-white bg-opacity-90 px-6 py-24 sm:py-32 lg:px-8"
+      className="isolate bg-white bg-opacity-80 px-6 py-24 sm:py-32 lg:px-8"
     >
       <div className="mx-auto max-w-2xl text-center">
         <motion.h2 
